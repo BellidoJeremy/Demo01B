@@ -24,7 +24,7 @@ namespace Demo01B
 
             return mensaje;
 
-        public void AsignarNombresCompletos()
+         void AsignarNombresCompletos()
         {
                 NombresCompletos = Nombres + " " + Apellidos;
 

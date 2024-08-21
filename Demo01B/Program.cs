@@ -1,36 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Demo01B;
+using System;
 
 namespace Demo01B
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
 
-            Persona persona = new Persona();
-            persona.Nombres = "Jeremy Emanuel";
-            persona.Apellidos = "Bellido Ñañez";
-
-            Persona persona1 = new Persona
+            Triangulo triangulo = new Triangulo
             {
-                Nombres = "David",
-                Apellidos = "Rey",
-                Edad = 16
-        };
+                X1 = 1,
+                Y1 = 1,
+                X2 = 4,
+                Y2 = 5,
+                X3 = 7,
+                Y3 = 2
+            };
 
-            Triangulo triangulo = new Triangulo();
-            triangulo.Base = 5;
-            triangulo.Altura = 8;
 
-            triangulo.CalcularArea();
+            double area = triangulo.CalcularArea();
+            double perimetro = triangulo.CalcularPerimetro();
 
-            Console.WriteLine(triangulo.CalcularArea());
 
-            Console.WriteLine("Hola Mundo");
+            Console.WriteLine($"Área del triángulo: {area}");
+            Console.WriteLine($"Perímetro del triángulo: {perimetro}");
             Console.Read();
         }
     }
